@@ -25,6 +25,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  # The culprit is this line of code. `Bundle install` for gem1 works if it is commented
   spec.add_dependency 'gem3'
 
   spec.add_development_dependency "bundler", "~> 1.11"
